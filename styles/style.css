@@ -1,0 +1,86 @@
+@layer reset, init, design;
+
+@import url(./normalize.css) layer(reset);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
+
+@layer init {
+ :root {
+        color-scheme: light dark; /* zapínač přepínače dark a light mod */
+        --header-bg-color: light-dark(#3B3E40, #3B3E40); 
+         --header-text-color: light-dark(#fff, #ffffff);
+        --primary-color: light-dark(#66D4D4, #3c5151);
+        --secondary-color:  light-dark(#fff, #4b4747);
+        --text-color: light-dark(#000, #fff);
+       --bg-color: light-dark(#fff, #000000);
+    }
+       html {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 100%; /* default 16px */
+        color: var(--text-color);
+    }
+}
+
+@layer design {
+    body {
+        background-color: var(--bg-color);
+    }
+    h1 {
+        font-size: 4rem; /* 60px by default */
+        font-weight: extra-bold; /* 800 */
+    }
+    .img-fluid {
+        display:block;
+        width:100%;  /* šířka */
+        height:auto; /* kdyby náhodou to někdo přepsal na něco jinýho */
+    }
+    .header {
+        background-image: url('../images/header-2560w.webp');
+        background-size: cover;
+        background-position: top left;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        line-height: 1.5;
+        padding: 1em;/* 1em = jeden řádek =16px */
+    }
+    .header__nav {
+        text-align: center;
+    }
+    .header__link {
+
+    }
+    .header__intro {
+        margin-top: 10vh;
+    }
+    .button {
+        border-radius: .5rem;
+        display: inline-block; /* vždycky, vždycky display block, nebo flex, ale nikdy nezůstane inline */
+        padding: 0.75em 2em;
+        text-decoration: none;
+    }
+    .button--light {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    }
+.img-block {
+    margin: 0;
+}
+.img-block__caption {
+    text-align: center;
+    margin-top: 0.5em; /* rem stejný na celym webu, em od písma */
+}
+.info-block{
+       margin: 0;
+       border: var(--primary-color) 2px solid;
+}
+.heading--h3 {
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+}
