@@ -11,6 +11,7 @@
         --primary-color: light-dark(#66D4D4, #3c5151);
         --secondary-color:  light-dark(#fff, #4b4747);
         --text-color: light-dark(#000, #fff);
+        --text-color-primary: light-dark(#fff, #ffffff);
        --bg-color: light-dark(#fff, #000000);
     }
        html {
@@ -57,6 +58,10 @@
         padding: 0.75em 2em;
         text-decoration: none;
     }
+    .button--primary {
+        background-color: var(--primary-color);
+        color: var(--text-color-primary);
+    }
     .button--light {
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -64,19 +69,74 @@
 .img-block {
     margin: 0;
 }
+.info-block--jumbo {
+   background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    border: none;
+    text-align: center;
+}
 .img-block__caption {
     text-align: center;
     margin-top: 0.5em; /* rem stejný na celym webu, em od písma */
+    
 }
 .info-block{
        margin: 0;
        border: var(--primary-color) 2px solid;
+       background-color: var(--header-bg-color);
+}
+.heading--h1 {
+    font-size: calc(1em + 3vw); /* responzivní velikost písma */
 }
 .heading--h3 {
     text-align: center;
     
 }
-
+.heading--bigger2x {
+    font-size: 2em;
+}
+.info-block {
+    margin: 1em 0;
+    padding: 1.5em;
+    border: 3px var(--primary-color);
+}
+.info-block__content {
+    text-align: center;
+    color: var(--text-color-primary);
+}
+.info-block__title {
+    text-align: center;
+    color: var(--text-color-primary);
+}
+.info-block__footer {
+    text-align: center;
+}
+.list__item {
+    margin-bottom: 1em;
+}
+.list__item::marker {
+    color: var(--primary-color);
+}
+.card {
+    max-width: 30rem;
+    display: inline-block;
+    padding: 1em;
+    vertical-align: top;
+}
+.gallery {
+box-sizing: border-box;
+margin: - 1em;
+}
+.gallery__item {
+    width: calc(50% - 2em); /*left je 1, right je 1, 1+1=2 */
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em;
+}
+.gallery__item-w100 {
+    width: calc(100% - 2em);
+    display: inline-block;
+}
 
 
 
